@@ -5,27 +5,24 @@
   <div
     class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"
   >
+
+  <span id="logo"><img [routerLink]="['/']" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_2-9665a76b1ae401a510ec1e0ca40ddcb3b0cfe45f1d51b77a308fea0845885648.svg" width="250px">&nbsp;</span>
     <!-- Brand -->
     <a
-      class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
+      class="uppercase hidden lg:inline-block "
       href="#pablo"
       >Mis películas favoritas</a
     >
     <a
-    class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-    href="#pablo"
+    class="uppercase hidden lg:inline-block "
+    [routerLink]="['/public/actorList']"
     >Actores populares</a
   >
-    <!-- User -->
-    <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
-      <app-user-dropdown class="block"></app-user-dropdown>
-    </ul>
 
-    <p (click)="requestToken()" *ngIf="!approved" class="example-icon" aria-hidden="false"
-      >person
-    </p>
-    <p (click)="logout()" *ngIf="approved" class="example-icon" aria-hidden="false"
-      aria-label="Example delete icon">logout
-  </p>
+  <app-login-component>
+
+  </app-login-component>
+
+
   </div>
 </nav>

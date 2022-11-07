@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+.logo{
+  width: 500px;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #1E1B2D, #828092);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  padding: 3rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20;
+
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.row {
+  margin: auto 0;
+}
+
+.card {
+  float: left;
+  padding: 1rem;
+  min-width: 500px;
+}
+
+.card .menu-content {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card .menu-content::before,
+.card .menu-content::after {
+  content: "";
+  display: table;
+}
+
+.card .menu-content::after {
+  clear: both;
+}
+
+.card .menu-content li {
+  display: inline-block;
+}
+
+.card .menu-content a {
+  color: #fff;
+}
+
+.card .wrapper {
+  background-color: #fff;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .wrapper:hover .data {
+  transform: translateY(0);
+}
+
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(80px + 1em));
+  transition: transform 0.3s;
+}
+
+.card .data .content {
+  padding: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.card .type {
+  font-size: 12px;
+}
+
+.card .title {
+  margin-top: 10px;
+}
+
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+
+.card input[type=checkbox] {
+  display: none;
+}
+
+.card input[type=checkbox]:checked+.menu-content {
+  transform: translateY(-60px);
+}
+
+.alternate-card {
+  float: left;
+  padding: 1rem;
+  width: 300px;
+}
+
+.alternate-card .menu-content {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.alternate-card .menu-content::before,
+.alternate-card .menu-content::after {
+  content: "";
+  display: table;
+}
+
+.alternate-card .menu-content::after {
+  clear: both;
+}
+
+.alternate-card .menu-content li {
+  display: inline-block;
+}
+
+.alternate-card .menu-content a {
+  color: #fff;
+}
+
+.alternate-card .wrapper {
+  background-color: #fff;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.alternate-card .wrapper:hover .data {
+  transform: translateY(0);
+}
+
+.alternate-card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(100% + 1em));
+  transition: transform 0.3s;
+}
+
+.alternate-card .data .content {
+  padding: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.alternate-card .type {
+  font-size: 12px;
+}
+
+.alternate-card .title {
+  margin-top: 10px;
+}
+
+.alternate-card .text {
+  height: 325px;
+  margin: 0;
+}
+
+.alternate-card input[type=checkbox] {
+  display: none;
+}
+
+.alternate-card input[type=checkbox]:checked+.menu-content {
+  transform: translateY(-60px);
+}
+
+.example-5 .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.example-5 .date span {
+  display: block;
+  text-align: center;
+}
+
+.example-5 .date .day {
+  font-weight: 700;
+  font-size: 1rem;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+
+.example-5 .content {
+  background-color: white;
+  color: black;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+.example-5 .title a {
+  color: black;
+}
+
+.example-5 .menu-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example-5 .menu-content li {
+  text-align: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.example-5 .menu-content .fab {
+  color: #333;
+}
+
+.example-5 .menu-content a {
+  font-size: 3rem;
+}
+
+.display-cards {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#titulo {
+  width: 100%;
+  margin-top: 0;
+  color: yellow;
+  text-align: center;
+  font-family: 'starFont', verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
+.botonesPagina,
+.botonSelected {
+  width: 120px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: 'starFont', verdana, sans-serif;
+  letter-spacing: 3px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.botonesPagina {
+  background-color: #1E1B2D;
+  color: white;
+  transition: all 0.2s;
+}
+
+.botonesPagina:hover {
+  background-color: yellow;
+  color: #1E1B2D;
+  scale: 1.1;
+}
+
+.botonDisplay {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#botonCreditosMenu {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  text-decoration: none;
+  font-family: 'starFont';
+  background-color: yellow;
+  color: #1E1B2D;
+}

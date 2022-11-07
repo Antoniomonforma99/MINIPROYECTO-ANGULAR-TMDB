@@ -6,12 +6,11 @@
 >
   <div class="items-center flex">
     <span
-      class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
+      class="w-12 h-12 text-sm text-white  inline-flex items-center justify-center rounded-full"
     >
       <img
         alt="..."
-        class="w-full rounded-full align-middle border-none shadow-lg"
-        src="assets/img/team-1-800x800.jpg"
+        src="../../../../assets/img/user.svg"
       />
     </span>
   </div>
@@ -21,30 +20,11 @@
     class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1 min-w-48"
     [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
   >
-    <a
-      href="#pablo"
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Action
-    </a>
-    <a
-      href="#pablo"
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Another action
-    </a>
-    <a
-      href="#pablo"
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Something else here
-    </a>
-    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-    <a
-      href="#pablo"
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Seprated link
-    </a>
+  <p (click)="requestToken()" *ngIf="!approved" class="example-icon" aria-hidden="false"
+      >Login
+    </p>
+    <p (click)="logout()" *ngIf="approved" class="example-icon" aria-hidden="false"
+      aria-label="Example delete icon">Logout
+  </p>
   </div>
 </div>

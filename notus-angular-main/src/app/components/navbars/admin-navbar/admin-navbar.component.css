@@ -1,0 +1,11 @@
+#logo {
+    display: flex;
+    align-items: center;
+}
+a{
+    font-size: large;
+    font-weight: 1000;
+}
+nav{
+    color: rgb(144, 206, 161);
+}

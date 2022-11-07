@@ -1,0 +1,13 @@
+
+<div class="display-cards">
+  <div *ngFor="let actor of actorList" class="example-5 alternate-card">
+    <div class="wrapper" >
+      <img [src]="getPhoto(actor)" alt="" style="width: 100%;">
+      <div class="data">
+        <div class="content">
+          <a><h2 [routerLink]="['/public/actorList', actor.id]" class="title" style="text-decoration: solid;">{{actor.name}}</h2></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

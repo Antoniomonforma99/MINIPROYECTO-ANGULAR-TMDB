@@ -1,0 +1,22 @@
+div{
+    margin-top: 80px;
+    width: 100%;
+}
+h1{
+    margin-top: 170px;
+    color: rgb(144, 206, 161);
+    font-size:xx-large;
+    text-align: center;
+}
+h2{
+    margin-top: 70px;
+    color: rgb( 1, 180, 228);
+    font-size:x-large;
+    text-align: center;
+}
+h3{
+    margin-top: 30px;
+    color: rgb( 1, 180, 228);
+    font-size:x-large;
+    text-align: center;
+}

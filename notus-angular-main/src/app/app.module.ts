@@ -49,6 +49,10 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListActorsComponent } from './components/list-actors/list-actors.component';
+import { ActorDetailComponent } from './components/actor-detail/actor-detail.component';
+import { HttpClientModule } from "@angular/common/http";
+import { LoginComponentComponent } from './components/login-component/login-component.component';
 
 @NgModule({
   declarations: [
@@ -86,8 +90,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    ListActorsComponent,
+    ActorDetailComponent,
+    LoginComponentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
