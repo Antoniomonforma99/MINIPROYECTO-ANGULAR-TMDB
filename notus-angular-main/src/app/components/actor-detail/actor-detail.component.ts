@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ActorDetailResponse } from 'src/app/models/interfaces/actor-detail';
+import { Actor } from 'src/app/models/interfaces/actor-list';
 import { ActorDetailService } from 'src/app/services/actor-detail.service';
+import { ListActorsService } from 'src/app/services/list-actors.service';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -13,8 +16,10 @@ export class ActorDetailComponent implements OnInit {
 
   actor: ActorDetailResponse;
   id: number;
+  
 
   constructor(private actorDetailService: ActorDetailService,
+    private actorService: ListActorsService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,6 +35,11 @@ export class ActorDetailComponent implements OnInit {
     this.actorDetailService.getById(this.id).subscribe((user: ActorDetailResponse) => {
       this.actor = user;
     });
+  }
+
+  
+  getPhoto(actor: ActorDetailResponse){
+    return `${environment.ACTOR_PHOTO_URL}${actor.profile_path}`
   }
   
 

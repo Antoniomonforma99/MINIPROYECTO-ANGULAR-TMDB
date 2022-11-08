@@ -1,0 +1,16 @@
+
+<p>Hola</p>
+
+<div class="display-cards">
+    <div *ngFor="let movie of movies" class="example-5 alternate-card">
+      <div class="wrapper" >
+        <img [src]="getPhoto(movie)" alt="" style="width: 100%;">
+        <div class="data">
+          <div class="content">
+            <a><h2 class="title" style="text-decoration: solid;">{{movie.name}}</h2></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

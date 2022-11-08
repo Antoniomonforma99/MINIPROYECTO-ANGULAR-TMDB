@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ActorDetailComponent } from "./components/actor-detail/actor-detail.component";
+import { FavoriteMoviesComponent } from "./components/favorite-movies/favorite-movies.component";
 import { ListActorsComponent } from "./components/list-actors/list-actors.component";
 
 // layouts
@@ -31,6 +32,7 @@ const routes: Routes = [
       {path: "", component: IndexComponent},
       { path: "actorList", component: ListActorsComponent },
       { path: "actorList/:id", component: ActorDetailComponent },
+      { path: "user/favMovies", component: FavoriteMoviesComponent}
    /*   { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },*/

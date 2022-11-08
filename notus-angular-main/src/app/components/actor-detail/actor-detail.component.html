@@ -1,2 +1,26 @@
-<p>{{actor.name}}</p>
-<p>{{actor.biography}}</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="container">	
+	
+	<div class="actor-details">
+		
+	<h1>{{actor.name}}</h1>
+	<span class="hint-star star">
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star-o" aria-hidden="true"></i>
+	</span>
+		
+			<p class="information">{{actor.biography}}</p>
+
+			
+</div>
+	
+<div class="product-image">
+	
+	<img [src]="getPhoto(actor)" alt="{{actor.name}}">
+	
+</div>
+
+</div>
