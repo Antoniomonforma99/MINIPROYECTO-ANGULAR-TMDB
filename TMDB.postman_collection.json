@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "506617bd-ff3e-43b7-95d4-ce7559db2f72",
+		"name": "TMDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13713306"
+	},
+	"item": [
+		{
+			"name": "Create New Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/authentication/token/new",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"authentication",
+						"token",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.themoviedb.org/authenticate/8bd2d94661853e52239e85b8067897b45ac7f0cd",
+					"protocol": "https",
+					"host": [
+						"www",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"authenticate",
+						"8bd2d94661853e52239e85b8067897b45ac7f0cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Session id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request_token",
+							"value": "8bd2d94661853e52239e85b8067897b45ac7f0cd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/authentication/session/new",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"authentication",
+						"session",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_POPULAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/person/popular?popular={{API_KEY}}&language=en-US&page=1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"person",
+						"popular"
+					],
+					"query": [
+						{
+							"key": "popular",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "language",
+							"value": "en-US"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonDetail",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetFavMovies",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{API_KEY}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "api_key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_KEY",
+			"value": "b8008bdcd571ed1babc919b3e12c2a65",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "https://api.themoviedb.org/3",
+			"type": "string"
+		}
+	]
+}
